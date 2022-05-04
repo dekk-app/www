@@ -42,10 +42,13 @@
     "@emotion/styled": "11.8.1",
     "@mui/icons-material": "5.6.2",
     "@mui/material": "5.6.3",
+    "@react-three/drei": "9.6.2",
+    "@react-three/fiber": "8.0.12",
     "next": "12.1.5",
     "next-i18next": "11.0.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "three": "0.140.0",
     "zustand": "3.7.2"
   },
   "devDependencies": {
@@ -69,6 +72,7 @@
     "@types/node": "^17.0.30",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
+    "@types/three": "^0.140.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "babel-loader": "^8.2.5",
