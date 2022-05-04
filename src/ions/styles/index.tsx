@@ -15,6 +15,9 @@ export const fontFaces = (
 export const globalStyles = (
 	<Global
 		styles={css`
+			body {
+				min-height: 100vh;
+			}
 			#__next {
 				display: contents;
 			}
