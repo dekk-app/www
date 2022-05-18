@@ -21,6 +21,7 @@ function App({ Component, pageProps }) {
 			{globalStyles}
 			<Head>
 				<title key="title">Dekk</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta name="msapplication-TileColor" content={theme.palette.primary.main} />
 				<meta name="theme-color" content={theme.palette.primary.main} />
 			</Head>

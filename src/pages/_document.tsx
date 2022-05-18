@@ -64,8 +64,7 @@ class Document extends NextDocument {
 		return (
 			<Html>
 				<Head>
-					<meta charSet="utf-8" />
-					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+					<meta charSet="utf8" />
 					<meta name="version" content={pkg.version} />
 					<meta name="application-name" content="Dekk" />
 					<meta name="apple-mobile-web-app-title" content="Dekk" />
