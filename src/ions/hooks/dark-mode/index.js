@@ -29,14 +29,14 @@ import { useLayoutEffect, useState } from "react";
  * );
  */
 export default function useDarkMode(defaultMode = true) {
-	const [mode, setMode] = useState(defaultMode);
+	const [darkMode, setDarkMode] = useState(defaultMode);
 
 	useLayoutEffect(() => {
 		const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
-		setMode(mediaQueryList.matches);
+		setDarkMode(mediaQueryList.matches);
 
 		function handleChange(event_) {
-			setMode(event_.matches);
+			setDarkMode(event_.matches);
 		}
 
 		mediaQueryList.addEventListener("change", handleChange);
@@ -44,5 +44,5 @@ export default function useDarkMode(defaultMode = true) {
 			mediaQueryList.removeEventListener("change", handleChange);
 		};
 	}, []);
-	return mode;
+	return darkMode;
 }
