@@ -4,4 +4,12 @@ const { i18n } = require("./next-i18next.config");
 module.exports = withTM({
 	i18n,
 	reactStrictMode: true,
+	webpack: config => {
+		config.module.rules.push({
+			test: /\.(glsl|vs|fs|vert|frag)$/,
+			exclude: /node_modules/,
+			use: ["raw-loader", "glslify-loader"],
+		});
+		return config;
+	},
 });

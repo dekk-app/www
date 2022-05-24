@@ -28,6 +28,8 @@ module.exports = {
 						tsx: "never",
 						css: "always",
 						json: "always",
+						vert: "always",
+						frag: "always",
 					},
 				],
 			},

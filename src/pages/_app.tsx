@@ -1,4 +1,5 @@
 import { cache } from "@/ions/configs/emotion";
+import useDarkMode from "@/ions/hooks/dark-mode";
 import { fontFaces, globalStyles } from "@/ions/styles";
 import { dark, light } from "@/ions/theme";
 import {
@@ -9,12 +10,16 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { appWithTranslation } from "next-i18next";
 import Head from "next/head";
 import React, { useMemo } from "react";
-import useDarkMode from "@/ions/hooks/dark-mode";
 
-function App({ Component, pageProps }) {
+if (typeof window === "undefined") {
+	React.useLayoutEffect = () => {
+		/**/
+	};
+}
+
+function App({ Component, pageProps: { canvas, ...pageProps } }) {
 	const mode = useDarkMode();
 	const theme = useMemo(() => (mode ? dark : light), [mode]);
-
 	return (
 		<>
 			{fontFaces}

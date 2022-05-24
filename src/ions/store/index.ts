@@ -2,12 +2,23 @@ import { Except } from "type-fest";
 import create from "zustand";
 
 export interface StoreModel {
-	count: number;
+	animation: {
+		start: boolean;
+	};
+	page: number;
+	animating: boolean;
+	particleSize: number;
 	set(modal: Except<StoreModel, "set">): void;
 }
 
 export const useStore = create<StoreModel>(set => ({
-	count: 0,
+	animation: {
+		direction: 1,
+		start: true,
+	},
+	page: 0,
+	particleSize: 2,
+	animating: false,
 	set(partial) {
 		set(partial);
 	},
