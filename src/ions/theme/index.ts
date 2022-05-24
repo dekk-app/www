@@ -13,7 +13,7 @@ export const dark = createTheme({
 			main: "#663399",
 		},
 		secondary: {
-			main: "#993366",
+			main: "#339999",
 		},
 	},
 	typography,
@@ -23,10 +23,10 @@ export const light = createTheme({
 	palette: {
 		mode: "light",
 		primary: {
-			main: "#663399",
+			main: "#993399",
 		},
 		secondary: {
-			main: "#993366",
+			main: "#339966",
 		},
 	},
 	typography,
